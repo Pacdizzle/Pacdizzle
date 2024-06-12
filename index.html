@@ -23,12 +23,6 @@
 	-->
 	<script async type="application/javascript" src="js/script.js"></script>
 	<script async type="application/javascript" src="js/matrix.min.js"></script>
-	<script async type="application/javascript" src="js/game-launcher.js"></script>
-	<script async type="application/javascript" src="js/weather.js"></script>
-	<!--
-	<script async type="application/javascript" src="js/exchange-rate.js"></script>
-	<script async type="application/javascript" src="js/expense-tracker.js"></script>
-	-->
 </head>
 <body onresize="canvasApp()">
 	<input type="checkbox" id="theme-switcher" hidden>
@@ -375,10 +369,10 @@
   				<a href="https://torrentfreak.com/" rel="noopener" target="_blank" ><img src="img/tf-icon.svg" alt=""></a>
   				<a href="https://www.ghacks.net/" rel="noopener" target="_blank" ><img src="img/ghacks-icon.webp" alt=""></a>
   			</div>
-  			<div class="rss-feed-iframe-light">
+  			<div class="rss-feed-iframe-light" id="rssLight">
   				<iframe id="rss-feed" width="100%" height="100%" src="components/gHacks-RSS-Light.html" frameborder="0" allowtransparency="true"></iframe>
   			</div>
-    		<div class="rss-feed-iframe-dark">
+    		<div class="rss-feed-iframe-dark" id="rssDark">
   				<iframe id="rss-feed" width="100%" height="100%" src="components/gHacks-RSS-Dark.html" frameborder="0" allowtransparency="true"></iframe>
   			</div>
   			<div class="rss-feed-footer">
@@ -464,12 +458,18 @@
   		<div class="disclaimer">
   			<p>No actual illegal copywrited content is hosted on this site.
   				<br>All contents are provided by non-affiliated third parties.
-  				<br>DMCA inquiries: spam@palafox.dev
+  				<br>DMCA inquiries: spam@padizzle.dev
   			</p>
   		</div>
 	</div>
   	<footer>
-  		<p><small>Copyright © 2023 Pac Studios <span>&#9684;</span> All rights reserved.</small></p>
+  		<p><small>Copyright © 2024 Pac Studios <span>&#9684;</span> All rights reserved.</small></p>
   	</footer>
+	<script async type="application/javascript" src="js/game-launcher.js"></script>
+	<script async type="application/javascript" src="js/weather.js"></script>
+	<!--
+	<script async type="application/javascript" src="js/exchange-rate.js"></script>
+	<script async type="application/javascript" src="js/expense-tracker.js"></script>
+	-->
 </body>
 </html>
