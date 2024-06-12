@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="302.5"
+   height="316.25"
+   viewBox="0 0 302.5 316.25"
+   sodipodi:docname="TorrentFreak logo.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1518"
+     inkscape:window-height="1002"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="151.04434"
+     inkscape:cy="231.34056"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g3338">
+    <path
+       style="fill:#fefefe"
+       d="m 78.75,173.125 0,-65.625 -24.375,0 -24.375,0 0,-16.875 0,-16.875 121.875,0 121.875,0 0,16.875 0,16.875 -43.125,0 -43.125,0 0,16.875 0,16.875 37.5,0 37.5,0 0,18.75 0,18.75 -37.5,0 -37.5,0 0,30 0,30 -20.625,0 -20.625,0 0,-65.625 0,-65.625 -13.125,0 -13.125,0 0,65.625 0,65.625 -20.625,0 -20.625,0 0,-65.625 z"
+       id="path3342"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#fe4693"
+       d="M 0,158.125 0,0 151.25,0 302.5,0 l 0,158.125 0,158.125 -151.25,0 -151.25,0 0,-158.125 z m 120,15 0,-65.625 13.125,0 13.125,0 0,65.625 0,65.625 20.625,0 20.625,0 0,-30 0,-30 37.5,0 37.5,0 0,-18.75 0,-18.75 -37.5,0 -37.5,0 0,-16.875 0,-16.875 43.125,0 43.125,0 0,-16.875 0,-16.875 -121.875,0 -121.875,0 0,16.875 0,16.875 24.375,0 24.375,0 0,65.625 0,65.625 20.625,0 20.625,0 0,-65.625 z"
+       id="path3340"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

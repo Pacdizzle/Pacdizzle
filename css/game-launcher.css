@@ -1,0 +1,210 @@
+.imageContainer {
+    position: relative;
+    width: 90vw;
+    margin: 15vh auto 5vh auto;
+  }
+  .imageContainer h1, .modal h2 {
+    margin: auto;
+  }
+  .imageContainer button {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+  }
+  #imageContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;  /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  }
+  #imageContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    color: rgb(0, 0, 100);
+    background-color: rgb(195, 195, 255);
+    box-shadow: rgba(44, 99, 187, .2) 0 -25px 18px -14px inset,rgba(44, 99, 187, .15) 0 1px 2px,rgba(44, 99, 187, .15) 0 2px 4px,rgba(44, 99, 187, .15) 0 4px 8px,rgba(44, 99, 187, .15) 0 8px 16px,rgba(44, 99, 187, .15) 0 16px 32px;
+    cursor: pointer;
+    border: 0;
+  }
+  .scroll-btn:hover {
+    box-shadow: rgba(44, 99, 187,.35) 0 -25px 18px -14px inset,rgba(44, 99, 187,.25) 0 1px 2px,rgba(44, 99, 187,.25) 0 2px 4px,rgba(44, 99, 187,.25) 0 4px 8px,rgba(44, 99, 187,.25) 0 8px 16px,rgba(44, 99, 187,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  #scrollLeft {
+    left: 0;
+  }
+  #scrollRight {
+    right: 0;
+  }
+  #imageContainer.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    user-select: none;
+  }
+  #imageContainer img:first-child {
+    margin-left: auto;
+  }
+  img {
+    width: 200px;
+    height: 300px;
+    margin: 0 5px 0 auto;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal {
+    margin: 70px auto;
+    padding: 20px;
+    color: white;
+    background: rgb(0, 0, 25);
+    border-radius: 5px;
+    width: 700px;
+    max-width: 80vw;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  .modal h2 {
+    margin: 1em auto;
+  }
+  .modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .modal .close:hover {
+    color: red;
+  }
+  .modal .content {
+    height: 500px;
+    max-height: 80vh;
+    overflow: auto;
+  }
+  .content p {
+    margin: 2em 0;
+  }
+  .content li {
+    text-align: left
+  }
+  .content button, .gl-btn {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .content button:before, .gl-btn:before {
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.content button::after, .gl-btn::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.content {
+  padding-bottom: 2em;
+}
+.highlight {
+  color: var(--light-tertiary-color);
+  font-weight: bolder;
+}
+.content input[type=text] {
+  margin: 1em auto;
+  border: none;
+  font-size: large;
+  color: var(--light-tertiary-color);
+  padding: 3px;
+  border-bottom: 2px solid var(--light-secondary-color);;
+  background: none;
+}
+.content input[type="text"]:focus {
+  outline: none;
+  border: 2px solid var(--light-secondary-color);
+}
+.imageContainer a {
+  margin: 2em 0;
+}
+.icons {
+  width: fit-content;
+  margin: auto;
+}
+.icons > .iconShow,
+.icons:hover > .iconHide,
+.icons:focus > .iconHide {
+  display: none;
+}
+.icons:focus > .iconShow,
+.icons:hover > .iconShow {
+  display: inline-block;
+}

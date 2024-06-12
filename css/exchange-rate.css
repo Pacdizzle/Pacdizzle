@@ -1,0 +1,68 @@
+.exchange-rate {
+    max-width: 226px;
+    min-width: 225px;
+    height: auto;
+    margin: auto;
+    flex: 1;
+  }
+  .exchange-rate div {
+    margin: .5em;
+  }
+  .exchange-rate h3 {
+    color: midnightblue;
+    user-select: none;
+  }
+  .currency select:focus,
+  .currency input:focus,
+  .currency button:focus {
+    outline: 0;
+  }
+  .currency select {
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    border: none;
+    overflow:hidden;
+    pointer-events: none;
+    font-weight: bold;
+    color: midnightblue;
+  }
+  .currency input {
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    color: midnightblue;
+  }
+  #amount-one, #amount-two {
+    max-width: 120px;
+  }
+  .input-number {
+    border-bottom: 2px solid midnightblue !important;
+    border-radius: 4px;
+  }
+  .currency-two input::-webkit-outer-spin-button,
+  .currency-two input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  /* For Firefox */
+  .currency-two input[type="number"] {
+      -moz-appearance: textfield;
+  }
+  .btn {
+    min-width: 80px;
+    min-height: 30px;
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    border: 0;
+    background-image: linear-gradient(345deg, darkgray 0%, #d3d3d3 50%);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: midnightblue;
+    padding: 6px 12px;
+  }
+  .btn:hover {
+    font-weight: bold;
+  }

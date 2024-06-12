@@ -1,0 +1,119 @@
+@charset "utf-8";
+html{
+    background-color: black;
+    scroll-behavior: smooth;
+  }
+::-webkit-scrollbar {
+    display: initial;
+    background-color: dimgray;
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb {
+    background: lime; 
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: green; 
+  }
+*{
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: white;
+}
+:not(ol,li,dl,dt,dd,ul){
+    margin: 0;
+    padding: 0;
+}
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+header {
+    margin: 1em;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 8px;
+    margin: 10px 10px 0 10px;
+    padding: 30px;
+    user-select: none;
+}
+header svg {
+    max-height: 100px;
+    fill: yellow;
+}
+.bodyContainerMC{
+    min-height: 100vh;
+    min-width: 1050px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.tittle{
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 8px;
+    padding: 10px;
+    user-select: none;
+}
+.flexContainer{
+    display: flex;
+    width: 100%;
+}
+.flexContainer > * {
+    width: calc(100% / 3);
+}
+.flexContainer h1{
+    padding: 1.5em 0;
+    text-align: center;
+    user-select: none;
+}
+img{
+    width: auto;
+    height: 50px;
+}
+.armor, .weapons, .tools, .links {
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 8px;
+    margin: 10px;
+}
+.header{
+    text-align: center;
+    background-color: rgba(0,127,0,0.5);
+    border-radius: 10px 10px 0 0;
+    padding: .5em; 
+    margin:0 1em;
+    user-select: none;
+}
+.list{
+background-color: rgba(0,65,0,0.5);
+border-radius: 0 0 10px 10px;
+padding: .5em;
+margin:.3em 1em 2em 1em;
+}
+.links{
+    text-align: center;
+}
+.links p{
+    padding: .5em;
+}
+.tittle a:link, .links a:link{
+    text-decoration: none;
+}
+.tittle a:visited, .links a:visited{
+    text-decoration: none;
+}
+.tittle a:hover, .links a:hover{
+    text-decoration: underline;
+}
+.tittle a:active, .links a:active{
+    text-decoration: underline;
+}
