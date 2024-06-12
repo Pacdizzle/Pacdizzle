@@ -1,7 +1,18 @@
-document.getElementById('theme-switcher').addEventListener('change', function() {
-  var rssLight = document.getElementById('rssLight');
-  var rssDark = document.getElementById('rssDark');
+var themeSwitch = document.getElementById('theme-switcher');
+var theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
+  if (theme) {
+    var themeValue = theme.split('=')[1];
+    themeSwitch.checked = themeValue === 'dark';
+  }
+  
+  themeSwitch.addEventListener('change', function() {
+    document.cookie = `theme=${this.checked ? 'dark' : 'light'}; path=/`;
+  });
 
+document.getElementById('theme-switcher').addEventListener('change', function() {
+var rssLight = document.getElementById('rssLight');
+var rssDark = document.getElementById('rssDark');
+  
   if(this.checked) {
       rssLight.style.display = 'none';
       rssDark.style.display = 'block';
