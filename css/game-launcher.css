@@ -208,3 +208,6 @@
 .icons:hover > .iconShow {
   display: inline-block;
 }
+.scroll-btn:hover {
+  color: var(--light-tertiary-color);
+}

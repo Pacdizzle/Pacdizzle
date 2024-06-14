@@ -10,19 +10,13 @@
 #theme-switcher:not(:checked) ~ .background-light {
     display: inline-block;
 }
-#theme-switcher:not(:checked) ~ .wrapper .banner-dark {
+#theme-switcher:checked ~ .wrapper #svg-light {
     display: none;
 }
-#theme-switcher:not(:checked) ~ .wrapper .banner-light {
-    display: inline-block;
+#theme-switcher:checked ~ .wrapper #svg-dark {
+    display: block;
 }
-#theme-switcher:checked ~ .wrapper .banner-light {
-    display: none;
-}
-#theme-switcher:checked ~ .wrapper .banner-dark {
-    display: inline-block;
-}
-#theme-switcher:checked ~ .wrapper i:hover {
+#theme-switcher:checked ~ .wrapper .fa-2xl:hover {
     color: var(--dark-primary-color);
 }
 #theme-switcher:checked ~ .wrapper h1 {
