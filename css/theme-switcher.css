@@ -102,6 +102,30 @@
 #theme-switcher:checked ~ .wrapper .imageContainer a {
     color: var(--dark-primary-color);
 }
+#theme-switcher:checked ~ .wrapper .weather {
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+}
+#theme-switcher:checked ~ .wrapper .exchange-rate {
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+    background-color: var(--dark-secondary-color);
+    background-image: linear-gradient(180deg, var(--dark-secondary-color) 0%, var(--secondary-color) 79%);
+}
+#theme-switcher:checked ~ .wrapper .er-btn {
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    border: 0;
+    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 39%);
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--primary-color);
+    padding: 6px 12px;
+    margin-top: 1em;
+}
 #theme-switcher:checked ~ .wrapper .disclaimer {
     color: var(--primary-color);
 }

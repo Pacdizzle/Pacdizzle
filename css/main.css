@@ -8,7 +8,6 @@
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --dark-primary-color: lime;
   --dark-secondary-color: green;
-  --svg-colot: 
 }
 body {
   background: var(--secondary-color);
@@ -259,6 +258,11 @@ hr {
   width: fit-content;
   font-size: larger;
   color: var(--light-primary-color);
+}
+.weather {
+  border-radius: 10px;
+  border-style: double;
+  border-color: var(--light-secondary-color);
 }
 .disclaimer {
   margin: 5vh auto;
