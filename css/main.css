@@ -45,6 +45,18 @@ body {
   margin: 0;
   padding: 0;
 }
+input {
+  color: var(--primary-color);
+  padding: 0 5px 1px;
+  border: 0;
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 4px;
+  background: transparent;
+  font-size: 20px;
+}
+input:focus {
+  outline: none;
+}
 h1, h2, a {
   color: var(--light-secondary-color);
 }
@@ -89,7 +101,7 @@ h1, h2, a {
 }
 .wrapper {
   width: 90vw;
-  height: 100vh;
+  height: auto;
   text-align: center;
   margin: auto;
 }
@@ -196,7 +208,7 @@ header svg {
 }
 hr {
   margin: 1em;
-  color: var(--dark-secondary-color);
+  color: var(--light-secondary-color);
 }
 .rss-feed {
   width: 90vw;
@@ -248,18 +260,27 @@ hr {
 .fmhy {
   color: var(--primary-color);
   font-size: x-large;
-  margin-top: 15vh;
+  margin: 10em auto;
 }
-.imageContainer h1 {
-  color: var(--light-primary-color);
-  user-select: none;
+.btn {
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  border: 0;
+  background-image: linear-gradient(0deg, var(--light-secondary-color) 0%, var(--light-primary-color) 50%);
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--light-secondary-color);
+  margin: 12px 0;
+  padding: 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
-.imageContainer a {
-  width: fit-content;
-  font-size: larger;
-  color: var(--light-primary-color);
+.btn:hover {
+    color: var(--light-tertiary-color);
 }
 .weather {
+  margin: 5em auto 10em;
   border-radius: 10px;
   border-style: double;
   border-color: var(--light-secondary-color);

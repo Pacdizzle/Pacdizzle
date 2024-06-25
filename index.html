@@ -17,6 +17,7 @@
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 	<link href="css/theme-switcher.css" rel="stylesheet" type="text/css">
 	<link href="css/game-launcher.css" rel="stylesheet" type="text/css">
+	<link href="css/percentage-calculator.css" rel="stylesheet" type="text/css">
 	<link href="css/exchange-rate.css" rel="stylesheet" type="text/css">
 	<!--
 	<link href="css/expense-tracker.css" rel="stylesheet" type="text/css">
@@ -683,66 +684,85 @@
   					Settings
   				</a>
   				<div id="imageContainer"></div>
-  				<button id="scrollLeft" class="scroll-btn" type="button"><i class="fa fa-chevron-left"></i></button>
-  				<button id="scrollRight" class="scroll-btn" type="button"><i class="fa fa-chevron-right"></i></button>
+  				<button id="scrollLeft" type="button"><i class="fa fa-chevron-left"></i></button>
+  				<button id="scrollRight" type="button"><i class="fa fa-chevron-right"></i></button>
   			</div>
   			<div id="game-launcher-settings" class="overlay">
   				<div class="modal">
-  				<h2>Game Launcher Settings</h2>
-  				<a class="close" href="#game-launcher">&times;</a>
-  				<div class="content">
-        			<p><i class="fas fa-circle-exclamation"></i> Tested on Windows 10/11</p>
-  					<p>Add your own games to the list.<br>Click on the <span class="highlight">CLEAR DATA</span> button below to remove the current list.</p>
-  					<button onclick="clearData()"><i class="fas fa-trash-can"></i> Clear Data</button>
-  					<p>Only links that look like this will work:</p>
-  					<ul>
-  						<li>Steam <span class="highlight">steam://rungameid/###</span></li>
-  						<li>Epic Games <span class="highlight">com.epicgames.launcher://apps/###ASugar?action=launch&silent=true</span></li>
-  						<li>Ubisoft Connect <span class="highlight">uplay://launch/###</span> </li>
-  						<li>FiveM server <span class="highlight">fivem://connect/"SERVER IP"</span></li>
-  					</ul>
-  					<p>If your shortcut link starts with <span class="highlight">C:\Program Files (x86)\</span> the link won't work.</p>
-  					<input type="text" id="imageInput" placeholder="Enter image URL">
-  					<br>
-  					<input type="text" id="linkInput" placeholder="Enter link URL">
-  					<br>
-  					<button onclick="displayImageAndLink()"><i class="fas fa-file-circle-plus"></i> Add Game</button>
-  					<p>Back up the current list</p>
-  					<button onclick="downloadData()"><i class="fas fa-file-arrow-down"></i> Download Data</button>
-  					<p>If you already have a .json file add it</p>
-  					<label for="uploadInput" class="gl-btn"><i class="fas fa-file-arrow-up"></i> Upload Data</label>
-  					<input type="file" id="uploadInput" onchange="uploadData()" accept=".json" style="display:none">
+  					<h2>Game Launcher Settings</h2>
+  					<a class="close" href="#game-launcher">&times;</a>
+  					<div class="content">
+        				<p><i class="fas fa-circle-exclamation"></i> Tested on Windows 10/11</p>
+  						<p>Add your own games to the list.<br>Click on the <span class="highlight">CLEAR DATA</span> button below to remove the current list.</p>
+  						<button onclick="clearData()"><i class="fas fa-trash-can"></i> Clear Data</button>
+  						<p>Only links that look like this will work:</p>
+  						<ul>
+  							<li>Steam <span class="highlight">steam://rungameid/###</span></li>
+  							<li>Epic Games <span class="highlight">com.epicgames.launcher://apps/###ASugar?action=launch&silent=true</span></li>
+  							<li>Ubisoft Connect <span class="highlight">uplay://launch/###</span> </li>
+  							<li>FiveM server <span class="highlight">fivem://connect/"SERVER IP"</span></li>
+  						</ul>
+  						<p>If your shortcut link starts with <span class="highlight">C:\Program Files (x86)\</span> the link won't work.</p>
+  						<input type="text" id="imageInput" placeholder="Enter image URL">
+  						<br>
+  						<input type="text" id="linkInput" placeholder="Enter link URL">
+  						<br>
+  						<button onclick="displayImageAndLink()"><i class="fas fa-file-circle-plus"></i> Add Game</button>
+  						<p>Back up the current list</p>
+  						<button onclick="downloadData()"><i class="fas fa-file-arrow-down"></i> Download Data</button>
+  						<p>If you already have a .json file add it</p>
+  						<label for="uploadInput" class="gl-btn"><i class="fas fa-file-arrow-up"></i> Upload Data</label>
+  						<input type="file" id="uploadInput" onchange="uploadData()" accept=".json" style="display:none">
+  					</div>
   				</div>
   			</div>
-  		</div>
-		<div class="weather">
-			<a class="weatherwidget-io" href="https://forecast7.com/en/32d51n117d04/tijuana/?unit=us" data-label_1="TIJUANA" data-label_2="WEATHER" data-font="Roboto" data-theme="weather_one" >TIJUANA WEATHER</a>
+		</div>
+		<div class="percentage-calculator">
+			<h1>Percentage Calculator</h1>
+			<div>
+				 <p> What is <input type="number" id="percent" />% of
+					<input type="number" id="num" />?
+				 </p>
+				<button class="btn"  onclick="percentage_1()">Calculate</button><br>
+				<input type="text" id="value1" readonly placeholder="result will show here" />
+			</div>
+			<hr>
+			<div>
+        		<p><input type="number" id="num1" />
+            		is what Percent of
+            		<input type="number" id="num2" />?
+				</p>
+        		<button class="btn" onclick="percentage_2()">Calculate</button></br>
+				<input type="text" id="value2" readonly placeholder="result will show here" />
+    		</div>
 		</div>
 		<div class="exchange-rate">
-			<h3>Currency Exchange Rate</h3>
-			<div class="currency">
-				<select id="currency-one">
-					<option value="USD" selected>USD</option>
-					<option value="MXN">MXN</option>
-				</select>
-				<input type="number" class="input-number" id="amount-one" placeholder="0" value="1" />
-			</div>
-			<div class="currency currency-two">
-				<select id="currency-two">
-					<option value="MXN" selected>MXN</option>
-					<option value="USD">USD</option>
-				</select>
-				<input type="number" id="amount-two" placeholder="0" />
+			<h1>Currency Exchange Rate</h1>
+			<div class="currency-bg">
+				<div class="currency">
+					<select id="currency-one">
+						<option value="USD" selected>USD</option>
+						<option value="MXN">MXN</option>
+					</select>
+					<input type="number" class="input-number" id="amount-one" placeholder="0" value="1" />
+				</div>
+				<div class="currency currency-two">
+					<select id="currency-two">
+						<option value="MXN" selected>MXN</option>
+						<option value="USD">USD</option>
+					</select>
+					<input type="number" id="amount-two" placeholder="0" />
+				</div>
 			</div>
 			<div class="swap-rate-container">
-				<button class="er-btn" id="swap">
+				<button class="btn" id="swap">
 					<i class="fas fa-arrows-rotate"></i> Swap
 				</button>
 				<div class="rate" id="rate" style="display: none;"></div>
 			</div>
 		</div>
-		<div>
-			
+		<div class="weather">
+			<a class="weatherwidget-io" href="https://forecast7.com/en/32d51n117d04/tijuana/?unit=us" data-label_1="TIJUANA" data-label_2="WEATHER" data-font="Roboto" data-theme="weather_one" >TIJUANA WEATHER</a>
 		</div>
   		<div class="disclaimer">
   			<p>No actual illegal copywrited content is hosted on this site.

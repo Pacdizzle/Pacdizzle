@@ -1,8 +1,7 @@
 .exchange-rate {
-  max-width: 226px;
-  min-width: 225px;
+  width: 300px;
   height: auto;
-  margin: 100px auto 200px;
+  margin: 0 auto 5em;
   padding: 2em 1em;
   border-radius: 15px;
   border-style: double;
@@ -10,9 +9,10 @@
   background-color: var(--light-secondary-color);
   background-image: linear-gradient(180deg, var(--light-secondary-color) 0%, var(--light-primary-color) 99%);
 }
-.exchange-rate h3 {
+.exchange-rate h1 {
   color: var(--primary-color);
   user-select: none;
+  padding-bottom: 1em;
 }
 .exchange-rate div {
   margin: .5em;
@@ -21,6 +21,11 @@
 .currency input:focus,
 .currency button:focus {
   outline: 0;
+}
+.currency-bg {
+  background: rgba(70, 130, 180, 0.5);
+  border-radius: 10px;
+  padding: 1em;
 }
 .currency select {
   background: transparent;
@@ -34,17 +39,10 @@
   color: var(--primary-color);
 }
 .currency input {
-  border: 0;
-  background: transparent;
-  font-size: 20px;
   color: var(--primary-color);
 }
 #amount-one, #amount-two {
   max-width: 120px;
-}
-.input-number {
-  border-bottom: 2px solid var(--primary-color) !important;
-  border-radius: 4px;
 }
 .currency-two input::-webkit-outer-spin-button,
 .currency-two input::-webkit-inner-spin-button {
@@ -54,21 +52,4 @@
 /* For Firefox */
 .currency-two input[type="number"] {
   -moz-appearance: textfield;
-}
-.er-btn {
-  min-width: 65px;
-  min-height: 20px;
-  background-color: var(--secondary-color);
-  box-shadow: var(--box-shadow);
-  border: 0;
-  background-image: linear-gradient(0deg, var(--light-secondary-color) 0%, var(--light-primary-color) 50%);
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  color: var(--light-tertiary-color);
-  padding: 6px 12px;
-  margin-top: 1em;
-}
-.er-btn:hover {
-  font-weight: bold;
 }

@@ -4,43 +4,56 @@
 #theme-switcher:checked ~ .theme-toggle-dark {
     display: inline-block;
 }
+
 #theme-switcher:checked ~ .background-dark {
     display: flex;
 }
 #theme-switcher:not(:checked) ~ .background-light {
     display: inline-block;
 }
+
 #theme-switcher:checked ~ .wrapper #svg-light {
     display: none;
 }
 #theme-switcher:checked ~ .wrapper #svg-dark {
     display: block;
 }
+
+#theme-switcher:checked ~ .wrapper input:focus {
+    border: 2px solid var(--dark-primary-color);
+}
+
 #theme-switcher:checked ~ .wrapper .fa-2xl:hover {
     color: var(--dark-primary-color);
 }
+
 #theme-switcher:checked ~ .wrapper h1 {
     width: fit-content;
     color: var(--dark-primary-color);
 }
+
 #theme-switcher:checked ~ .wrapper h2 {
     width: fit-content;
     color: var(--dark-primary-color);
 }
+
 #theme-switcher:checked ~ .wrapper .dropdown-content {
     color: var(--primary-color);
     background: var(--secondary-color);
     border-color: var(--dark-secondary-color);
 }
+
 #theme-switcher:checked ~ .wrapper .h1-a a {
     padding: 0 !important;
 }
 #theme-switcher:checked ~ .wrapper .h1-a h1:hover {
     color: var(--primary-color);
 }
+
 #theme-switcher:not(:checked) ~ .wrapper .dropdown-content {
     border-radius: 10px;
 }
+
 #theme-switcher:checked ~ .wrapper .dropdown-content a {
     color: var(--primary-color);
 }
@@ -48,18 +61,26 @@
     background-color: var(--dark-secondary-color);
     color: var(--primary-color);
 }
+
 #theme-switcher:checked ~ .wrapper .fa-arrow-turn-up {
     color: var(--primary-color) !important;
 }
+
 #theme-switcher:not(:checked) ~ .wrapper .fa-window-maximize {
     color: var(--secondary-color) !important;
 }
+
 #theme-switcher:checked ~ .wrapper .dropdown-content::-webkit-scrollbar-thumb {
     background: var(--dark-primary-color);
 }
 #theme-switcher:checked ~ .wrapper .dropdown-content::-webkit-scrollbar-thumb:hover {
     background: var(--dark-secondary-color); 
 }
+
+#theme-switcher:checked ~ .wrapper hr {
+    color: var(--dark-primary-color);
+}
+
 #theme-switcher:not(:checked) ~ .wrapper .rss-feed-iframe-light {
     border-radius: 10px;
 }
@@ -71,6 +92,14 @@
 }
 #theme-switcher:checked ~ .wrapper .rss-feed-footer a:hover {
     color: var(--dark-primary-color);
+}
+
+#theme-switcher:checked ~ .wrapper .imageContainer {
+    color: var(--primary-color);
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+    background:rgba(0, 0, 0, .7)
 }
 #theme-switcher:checked ~ .wrapper .modal {
     background: rgb(0, 25, 0);
@@ -84,17 +113,10 @@
 #theme-switcher:checked ~ .wrapper .highlight {
     color: var(--dark-primary-color);
 }
-#theme-switcher:checked ~ .wrapper input[type=text] {
-    color: var(--dark-primary-color);
-    border-bottom: 2px solid var(--dark-secondary-color);
-}
-#theme-switcher:checked ~ .wrapper input[type="text"]:focus {
-    border: 2px solid var(--dark-primary-color);
-}
 #theme-switcher:not(:checked) ~ .wrapper img {
     border-radius: 15px;
 }
-#theme-switcher:checked ~ .wrapper .scroll-btn {
+#theme-switcher:checked ~ .wrapper .imageContainer Button {
     color: darkgreen;
     background-color: rgb(195, 255, 195);
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
@@ -102,33 +124,66 @@
 #theme-switcher:checked ~ .wrapper .imageContainer a {
     color: var(--dark-primary-color);
 }
+
+#theme-switcher:checked ~ .wrapper .percentage-calculator {
+    color: var(--primary-color);
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+    background:rgba(0, 0, 0, .7)
+}
+#theme-switcher:checked ~ .wrapper .percentage-calculator div:last-child {
+    color: var(--primary-color);
+}
+#theme-switcher:checked ~ .wrapper .percentage-calculator input {
+    color: var(--dark-primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+#theme-switcher:checked ~ .wrapper .percentage-calculator button {
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 39%);
+    color: var(--primary-color);
+}
+#theme-switcher:checked ~ .wrapper .percentage-calculator button:hover {
+    color: var(--dark-primary-color);
+}
+#theme-switcher:checked ~ .wrapper .percentage-calculator input[type=text]{
+    border: 2px solid var(--dark-secondary-color);
+}
+
+#theme-switcher:checked ~ .wrapper .exchange-rate {
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+    background:rgba(0, 0, 0, .7)
+}
+#theme-switcher:checked ~ .wrapper .exchange-rate h3 {
+    color: var(--dark-primary-color);
+}
+#theme-switcher:checked ~ .wrapper .currency-bg {
+    background: rgba(0, 0, 0, 0.7);
+}
+#theme-switcher:checked ~ .wrapper .exchange-rate button {
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 39%);
+    color: var(--primary-color);
+}
+#theme-switcher:checked ~ .wrapper .exchange-rate button:hover {
+    color: var(--dark-primary-color);
+}
+
 #theme-switcher:checked ~ .wrapper .weather {
     border-radius: 0;
     border-style: double;
     border-color: var(--dark-secondary-color);
 }
-#theme-switcher:checked ~ .wrapper .exchange-rate {
-    border-radius: 0;
-    border-style: double;
-    border-color: var(--dark-secondary-color);
-    background-color: var(--dark-secondary-color);
-    background-image: linear-gradient(180deg, var(--dark-secondary-color) 0%, var(--secondary-color) 79%);
-}
-#theme-switcher:checked ~ .wrapper .er-btn {
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
-    border: 0;
-    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 39%);
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--primary-color);
-    padding: 6px 12px;
-    margin-top: 1em;
-}
+
 #theme-switcher:checked ~ .wrapper .disclaimer {
     color: var(--primary-color);
 }
+
 #theme-switcher:checked ~ .wrapper footer p {
     color: var(--primary-color);
 }
