@@ -63,7 +63,7 @@ function addTransactionDOM(transaction) {
     transaction.amount
   )}</span> <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
-  })">x</button>
+  })"><i class="fas fa-x"></i></button>
   `;
 
   list.appendChild(item);

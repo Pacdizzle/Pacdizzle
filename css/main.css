@@ -333,7 +333,7 @@ footer span {
     font-size: large;
   }
   .dropdown-content {
-    width: 85vw;
+    min-width: 85vw;
     margin: auto;
     left: 0;
     right: 0;

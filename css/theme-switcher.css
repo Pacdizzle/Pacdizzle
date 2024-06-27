@@ -177,6 +177,6 @@
     color: var(--primary-color);
 }
 
-#theme-switcher:checked ~ .wrapper footer p {
+#theme-switcher:checked ~ footer p {
     color: var(--primary-color);
 }

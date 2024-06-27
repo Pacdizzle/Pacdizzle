@@ -11,9 +11,11 @@
   width: 400px;
 }
 #expense-tracker h1 {
-  letter-spacing: 1px;
   margin: 0;
   color: var(--primary-color);
+}
+#expense-tracker h1:last-of-type {
+  font-weight: 900;
 }
 #expense-tracker h2 {
   color: var(--primary-color);
@@ -42,7 +44,8 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 30px;
+  border-radius: 10px;
 }
 #expense-tracker .inc-exp-container > div {
   flex: 1;
@@ -83,7 +86,7 @@
 }
 #expense-tracker .list {
   list-style-type: none;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 40px;
   height: 300px;
   overflow: auto;
@@ -111,9 +114,9 @@
   background-color: #e74c3c;
   border: 0;
   color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
+  padding: 5px;
+  width: 28px;
+  height: 28px;
   position: absolute;
   top: 50%;
   left: 0;
