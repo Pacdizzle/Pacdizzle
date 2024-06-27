@@ -1,6 +1,7 @@
 .percentage-calculator {
-    width: fit-content;
-    margin: 0 auto 5em;
+    width: 450px;
+    max-width: 90vw;
+    margin: auto;
     color: var(--primary-color);
     border-radius: 15px;
     border-style: double;
@@ -13,8 +14,8 @@
     margin: 1em auto;
 }
 .percentage-calculator div {
-    margin: 12px 0;
-    padding: 24px;
+    padding: 2em;
+    width: fit-content;
     text-align: center;
     margin: auto;
 }

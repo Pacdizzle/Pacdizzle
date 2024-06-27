@@ -19,21 +19,24 @@
     display: block;
 }
 
+#theme-switcher:checked ~ .wrapper button:not(.delete-btn), #theme-switcher:checked ~ .wrapper .btn {
+    border-radius: 5px;
+    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 50%);
+}
+#theme-switcher:checked ~ .wrapper button:not(.delete-btn):hover, #theme-switcher:checked ~ .wrapper .btn:hover {
+    color: var(--primary-color);
+    box-shadow: rgba(44, 187, 99,.35) 0 -25px 18px -14px inset,rgba(44, 187, 99,.25) 0 1px 2px,rgba(44, 187, 99,.25) 0 2px 4px,rgba(44, 187, 99,.25) 0 4px 8px,rgba(44, 187, 99,.25) 0 8px 16px,rgba(44, 187, 99,.25) 0 16px 32px;
+    transform: scale(1.05);
+}
+
 #theme-switcher:checked ~ .wrapper input:focus {
     border: 2px solid var(--dark-primary-color);
+    border-bottom: 2px solid var(--dark-primary-color) !important;
 }
 
-#theme-switcher:checked ~ .wrapper .fa-2xl:hover {
-    color: var(--dark-primary-color);
-}
-
-#theme-switcher:checked ~ .wrapper h1 {
-    width: fit-content;
-    color: var(--dark-primary-color);
-}
-
-#theme-switcher:checked ~ .wrapper h2 {
-    width: fit-content;
+#theme-switcher:checked ~ .wrapper .fa-2xl:hover, #theme-switcher:checked ~ .wrapper hr, #theme-switcher:checked ~ .wrapper h1:first-of-type, #theme-switcher:checked ~ .wrapper h2, #theme-switcher:checked ~ .wrapper h3, #theme-switcher:checked ~ .wrapper .rss-feed-footer a:hover, #theme-switcher:checked ~ .wrapper .highlight, #theme-switcher:checked ~ .wrapper .imageContainer a, #theme-switcher:checked ~ .wrapper #expense-tracker h2 a {
     color: var(--dark-primary-color);
 }
 
@@ -53,7 +56,9 @@
 #theme-switcher:not(:checked) ~ .wrapper .dropdown-content {
     border-radius: 10px;
 }
-
+#theme-switcher:checked ~ .wrapper .link-header h1 {
+    width: fit-content;
+}
 #theme-switcher:checked ~ .wrapper .dropdown-content a {
     color: var(--primary-color);
 }
@@ -77,10 +82,6 @@
     background: var(--dark-secondary-color); 
 }
 
-#theme-switcher:checked ~ .wrapper hr {
-    color: var(--dark-primary-color);
-}
-
 #theme-switcher:not(:checked) ~ .wrapper .rss-feed-iframe-light {
     border-radius: 10px;
 }
@@ -89,9 +90,6 @@
 }
 #theme-switcher:checked ~ .wrapper .rss-feed-iframe-dark {
     display: inline-block;
-}
-#theme-switcher:checked ~ .wrapper .rss-feed-footer a:hover {
-    color: var(--dark-primary-color);
 }
 
 #theme-switcher:checked ~ .wrapper .imageContainer {
@@ -104,25 +102,18 @@
 #theme-switcher:checked ~ .wrapper .modal {
     background: rgb(0, 25, 0);
 }
+#theme-switcher:checked ~ .wrapper .modal h2 {
+    width: fit-content;
+}
 #theme-switcher:checked ~ .wrapper .content::-webkit-scrollbar-thumb {
     background: var(--dark-primary-color);
 }
 #theme-switcher:checked ~ .wrapper .content::-webkit-scrollbar-thumb:hover {
     background: var(--dark-secondary-color); 
 }
-#theme-switcher:checked ~ .wrapper .highlight {
-    color: var(--dark-primary-color);
-}
+
 #theme-switcher:not(:checked) ~ .wrapper img {
     border-radius: 15px;
-}
-#theme-switcher:checked ~ .wrapper .imageContainer Button {
-    color: darkgreen;
-    background-color: rgb(195, 255, 195);
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-}
-#theme-switcher:checked ~ .wrapper .imageContainer a {
-    color: var(--dark-primary-color);
 }
 
 #theme-switcher:checked ~ .wrapper .percentage-calculator {
@@ -130,7 +121,7 @@
     border-radius: 0;
     border-style: double;
     border-color: var(--dark-secondary-color);
-    background:rgba(0, 0, 0, .7)
+    background:rgba(0, 0, 0, .7);
 }
 #theme-switcher:checked ~ .wrapper .percentage-calculator div:last-child {
     color: var(--primary-color);
@@ -138,16 +129,9 @@
 #theme-switcher:checked ~ .wrapper .percentage-calculator input {
     color: var(--dark-primary-color);
     border-bottom: 2px solid var(--primary-color);
+    background-color: rgba(0, 50, 0, .2);
 }
-#theme-switcher:checked ~ .wrapper .percentage-calculator button {
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
-    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 39%);
-    color: var(--primary-color);
-}
-#theme-switcher:checked ~ .wrapper .percentage-calculator button:hover {
-    color: var(--dark-primary-color);
-}
+
 #theme-switcher:checked ~ .wrapper .percentage-calculator input[type=text]{
     border: 2px solid var(--dark-secondary-color);
 }
@@ -156,22 +140,31 @@
     border-radius: 0;
     border-style: double;
     border-color: var(--dark-secondary-color);
-    background:rgba(0, 0, 0, .7)
+    background:rgba(0, 0, 0, .7);
 }
-#theme-switcher:checked ~ .wrapper .exchange-rate h3 {
-    color: var(--dark-primary-color);
-}
+
 #theme-switcher:checked ~ .wrapper .currency-bg {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 50, 0, 0.2);
 }
-#theme-switcher:checked ~ .wrapper .exchange-rate button {
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
-    background-image: linear-gradient(180deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 39%);
+
+#theme-switcher:checked ~ .wrapper #expense-tracker, #theme-switcher:checked ~ .wrapper #expense-tracker .inc-exp-container {
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+    background:rgba(0, 0, 0, .7);
+}
+#theme-switcher:checked ~ .wrapper #expense-tracker .inc-exp-container {
+    border-radius: 0;
+    border-style: double;
+    border-color: var(--dark-secondary-color);
+    background:rgba(0, 30, 0, .2);
+}
+#theme-switcher:checked ~ .wrapper .inc-exp-container h4 {
     color: var(--primary-color);
 }
-#theme-switcher:checked ~ .wrapper .exchange-rate button:hover {
-    color: var(--dark-primary-color);
+#theme-switcher:checked ~ .wrapper #expense-tracker input {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 #theme-switcher:checked ~ .wrapper .weather {

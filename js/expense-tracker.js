@@ -128,14 +128,22 @@ form.addEventListener('submit', addTransaction);
 
 
 // Undo button click handler
-const undoButton = document.getElementById("undo-button");
-undoButton.addEventListener("click", () => {
+const undoButton1 = document.getElementById("undo-button1");
+const undoButton2 = document.getElementById("undo-button2");
+undoButton1.addEventListener("click", () => {
   const lastCommand = undoStack.pop();
   if (lastCommand) {
     lastCommand.undo();
     scrollBtns();
   }
 });
+undoButton2.addEventListener("click", () => {
+  const lastCommand = undoStack.pop();
+  if (lastCommand) {
+    lastCommand.undo();
+    scrollBtns();
+  }
+})
 
 const undoStack = [];
 

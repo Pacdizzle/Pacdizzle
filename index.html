@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -19,9 +19,7 @@
 	<link href="css/game-launcher.css" rel="stylesheet" type="text/css">
 	<link href="css/percentage-calculator.css" rel="stylesheet" type="text/css">
 	<link href="css/exchange-rate.css" rel="stylesheet" type="text/css">
-	<!--
 	<link href="css/expense-tracker.css" rel="stylesheet" type="text/css">
-	-->
 	<script async type="application/javascript" src="js/script.js"></script>
 	<script async type="application/javascript" src="js/matrix.min.js"></script>
 </head>
@@ -684,8 +682,8 @@
   					Settings
   				</a>
   				<div id="imageContainer"></div>
-  				<button id="scrollLeft" type="button"><i class="fa fa-chevron-left"></i></button>
-  				<button id="scrollRight" type="button"><i class="fa fa-chevron-right"></i></button>
+  				<button id="scrollLeft" class="scroll-btn" type="button"><i class="fa fa-chevron-left"></i></button>
+  				<button id="scrollRight" class="scroll-btn" type="button"><i class="fa fa-chevron-right"></i></button>
   			</div>
   			<div id="game-launcher-settings" class="overlay">
   				<div class="modal">
@@ -709,56 +707,118 @@
   						<br>
   						<button onclick="displayImageAndLink()"><i class="fas fa-file-circle-plus"></i> Add Game</button>
   						<p>Back up the current list</p>
-  						<button onclick="downloadData()"><i class="fas fa-file-arrow-down"></i> Download Data</button>
+  						<button onclick="downloadData()"><i class="fas fa-file-arrow-down"></i> Export Data</button>
   						<p>If you already have a .json file add it</p>
-  						<label for="uploadInput" class="gl-btn"><i class="fas fa-file-arrow-up"></i> Upload Data</label>
+  						<label for="uploadInput" class="btn"><i class="fas fa-file-arrow-up"></i> Import Data</label>
   						<input type="file" id="uploadInput" onchange="uploadData()" accept=".json" style="display:none">
   					</div>
   				</div>
   			</div>
 		</div>
-		<div class="percentage-calculator">
-			<h1>Percentage Calculator</h1>
-			<div>
-				 <p> What is <input type="number" id="percent" />% of
-					<input type="number" id="num" />?
-				 </p>
-				<button class="btn"  onclick="percentage_1()">Calculate</button><br>
-				<input type="text" id="value1" readonly placeholder="result will show here" />
-			</div>
-			<hr>
-			<div>
-        		<p><input type="number" id="num1" />
-            		is what Percent of
-            		<input type="number" id="num2" />?
-				</p>
-        		<button class="btn" onclick="percentage_2()">Calculate</button></br>
-				<input type="text" id="value2" readonly placeholder="result will show here" />
-    		</div>
-		</div>
-		<div class="exchange-rate">
-			<h1>Currency Exchange Rate</h1>
-			<div class="currency-bg">
-				<div class="currency">
-					<select id="currency-one">
-						<option value="USD" selected>USD</option>
-						<option value="MXN">MXN</option>
-					</select>
-					<input type="number" class="input-number" id="amount-one" placeholder="0" value="1" />
-				</div>
-				<div class="currency currency-two">
-					<select id="currency-two">
-						<option value="MXN" selected>MXN</option>
-						<option value="USD">USD</option>
-					</select>
-					<input type="number" id="amount-two" placeholder="0" />
+		<div class="grid-container">
+			<div class="grid-item-container-1">
+				<div class="percentage-calculator">
+					<h1>Percentage Calculator</h1>
+					<div>
+						 <p> What is <input type="number" id="percent" />% of
+							<input type="number" id="num" />?
+						 </p>
+						<button class="btn"  onclick="percentage_1()">Calculate</button><br>
+						<input type="text" id="value1" readonly placeholder="result will show here" />
+					</div>
+					<hr>
+					<div>
+        				<p>
+							<input type="number" id="num1" />
+            				is what Percent of
+            				<input type="number" id="num2" />?
+						</p>
+        				<button class="btn" onclick="percentage_2()">Calculate</button></br>
+						<input type="text" id="value2" readonly placeholder="result will show here" />
+    				</div>
 				</div>
 			</div>
-			<div class="swap-rate-container">
-				<button class="btn" id="swap">
-					<i class="fas fa-arrows-rotate"></i> Swap
-				</button>
-				<div class="rate" id="rate" style="display: none;"></div>
+			<div class="grid-item-container-2">
+				<div class="exchange-rate">
+					<h1>Currency Exchange Rate</h1>
+					<div class="currency-bg">
+						<div class="currency">
+							<select id="currency-one">
+								<option value="USD" selected>USD</option>
+								<option value="MXN">MXN</option>
+							</select>
+							<input type="number" class="input-number" id="amount-one" placeholder="0" value="1" />
+						</div>
+						<div class="currency currency-two">
+							<select id="currency-two">
+								<option value="MXN" selected>MXN</option>
+								<option value="USD">USD</option>
+							</select>
+							<input type="number" id="amount-two" placeholder="0" />
+						</div>
+					</div>
+					<div class="swap-rate-container">
+						<button class="btn" id="swap">
+							<i class="fas fa-arrows-rotate"></i> Swap
+						</button>
+					</div>
+					<div class="rate" id="rate" style="display: none;"></div>
+				</div>
+			</div>
+			<div class="grid-item-container-3">
+				<div id="expense-tracker">
+					<h1>Expense Tracker</h1>
+					<h2>
+						<a href="#expense-tracker-settings" class="icons">
+							<i class="fa fa-gear iconHide"></i>
+							<i class="fa fa-gear fa-spin iconShow"></i>
+							Settings
+						</a>
+					</h2>
+					<h4>Your Balance</h4>
+					<h1 id="balance">$0.00</h1>
+					<div class="inc-exp-container">
+				  		<div>
+							<h4>Income</h4>
+							<p id="money-plus" class="money plus">+$0.00</p>
+				  		</div>
+				  		<div>
+							<h4>Expense</h4>
+							<p id="money-minus" class="money minus">-$0.00</p>
+				  		</div>
+					</div>
+					<h2>History</h2>
+					<div class="list-container">
+						<ul id="list" class="list"></ul>
+						<button id="scrollUp" class="scroll-btn"><i class="fas fa-chevron-up"></i></button>
+						<button id="scrollDown" class="scroll-btn"><i class="fas fa-chevron-down"></i></button>
+					</div>
+					<h2>Add new transaction</h2>
+					<form id="form">
+						<div class="form-control">
+							<input type="text" id="text" placeholder="Reason..." />
+						</div>
+						<div class="form-control">
+							<input type="number" id="amount" placeholder="Amount... (negative digit = expense | positive digit = income)" />
+						</div>
+						<button class="btn">Add transaction</button>
+					</form>
+					<div id="expense-tracker-settings" class="overlay">
+						<div class="modal">
+							<h2>Expense Tracker Settings</h2>
+							<a class="close" href="#expense-tracker">&times;</a>
+							<div class="content">
+								<button id="undo-button1"><i class="fas fa-rotate-left"></i> UNDO</button>
+								<button onclick="removeAllTransactions()"><i class="fas fa-trash-can"></i> Remove All Data</button>
+								<label class="btn"><input type="file" id="file-input" accept=".json"/><i class="fas fa-file-arrow-up"></i> Import Data</label>
+								<button class="btn" onclick="exportDataToJSON()"><i class="fas fa-file-arrow-down"> </i> Export Data</button>
+							</div>
+						</div>
+					</div>
+					<div id="undoToast">
+						<button id="undo-button2"><i class="fas fa-rotate-left"></i> UNDO</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="weather">
@@ -777,8 +837,6 @@
 	<script async type="application/javascript" src="js/game-launcher.js"></script>
 	<script async type="application/javascript" src="js/weather.js"></script>
 	<script async type="application/javascript" src="js/exchange-rate.js"></script>
-	<!--
 	<script async type="application/javascript" src="js/expense-tracker.js"></script>
-	-->
 </body>
 </html>

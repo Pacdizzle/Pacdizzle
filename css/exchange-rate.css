@@ -1,8 +1,8 @@
 .exchange-rate {
-  width: 300px;
-  height: auto;
-  margin: 0 auto 5em;
-  padding: 2em 1em;
+  width: 450px;
+  max-width: 90vw;
+  margin: auto;
+  text-align: center;
   border-radius: 15px;
   border-style: double;
   border-color: var(--light-secondary-color);
@@ -12,10 +12,10 @@
 .exchange-rate h1 {
   color: var(--primary-color);
   user-select: none;
-  padding-bottom: 1em;
+  padding: 1em;
 }
 .exchange-rate div {
-  margin: .5em;
+  margin: .5em auto;
 }
 .currency select:focus,
 .currency input:focus,
@@ -25,7 +25,11 @@
 .currency-bg {
   background: rgba(70, 130, 180, 0.5);
   border-radius: 10px;
+  width: fit-content;
   padding: 1em;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 .currency select {
   background: transparent;

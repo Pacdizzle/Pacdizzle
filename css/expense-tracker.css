@@ -1,99 +1,87 @@
-* {
-  box-sizing: border-box;
+#expense-tracker {
+  padding: 1em;
+  border-radius: 15px;
+  border-style: double;
+  border-color: var(--light-secondary-color);
+  background-color: var(--light-secondary-color);
+  background-image: linear-gradient(180deg, var(--light-secondary-color) 0%, var(--light-primary-color) 99%);
 }
-
-.expense-tracker {
-  max-width: 400px;
-  margin: auto;
-}
-
 .container {
   margin: 30px auto;
   width: 400px;
 }
-
-h1 {
+#expense-tracker h1 {
   letter-spacing: 1px;
   margin: 0;
+  color: var(--primary-color);
 }
-
-h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
+#expense-tracker h2 {
+  color: var(--primary-color);
 }
-
-h4 {
-  margin: 0;
+#expense-tracker h2 a {
+  color: var(--primary-color);
+}
+#expense-tracker h2:last-of-type {
+  color: var(--light-secondary-color);
+}
+#expense-tracker h4 {
+  color: var(--primary-color);
+}
+#expense-tracker h4:first-of-type {
+  margin-top: 2em;
+}
+#expense-tracker h4:first-child {
   text-transform: uppercase;
+  color: var(--secondary-color);
 }
-
-.inc-exp-container {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
+#expense-tracker p {
+  font-weight: bolder;
+}
+#expense-tracker .inc-exp-container {
+  background-color: var(--primary-color);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
-
-.inc-exp-container > div {
+#expense-tracker .inc-exp-container > div {
   flex: 1;
   text-align: center;
 }
-
-.inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+#expense-tracker .inc-exp-container > div:first-of-type {
+  border-right: 1px solid var(--secondary-color);
 }
-
-.money {
+#expense-tracker .money {
   font-size: 20px;
   letter-spacing: 1px;
   margin: 5px 0;
 }
-
-.money.plus {
+#expense-tracker .money.plus {
   color: #2ecc71;
 }
-
-.money.minus {
+#expense-tracker .money.minus {
   color: #c0392b;
 }
-
-label {
+#expense-tracker label {
   display: inline-block;
   margin: 10px 0;
 }
-
-input[type='text'],
-input[type='number'] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
+#expense-tracker input {
+  color: var(--light-secondary-color);
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px;
-  width: 100%;
+  width: 90%;
+  margin: 2em auto;
+  border-bottom: 2px solid var(--light-secondary-color);
 }
-
-.btn {
-  cursor: pointer;
-  background-color: #9c88ff;
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
+#expense-tracker .scroll-btn { 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
-
-.btn:focus,
-.delete-btn:focus {
-  outline: 0;
-}
-
-.list {
+#expense-tracker .list {
   list-style-type: none;
   padding: 20px;
   margin-bottom: 40px;
@@ -102,27 +90,23 @@ input[type='number'] {
   scrollbar-width: none;  /* For Firefox */
   -ms-overflow-style: none;  /* For Internet Explorer and Edge */
 }
-
-.list li {
-  background-color: #fff;
+#expense-tracker .list li {
+  background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
-  color: #333;
+  color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;
 }
-
-.list li.plus {
+#expense-tracker .list li.plus {
   border-right: 5px solid #2ecc71;
 }
-
-.list li.minus {
+#expense-tracker .list li.minus {
   border-right: 5px solid #c0392b;
 }
-
-.delete-btn {
+#expense-tracker .delete-btn {
   cursor: pointer;
   background-color: #e74c3c;
   border: 0;
@@ -137,70 +121,68 @@ input[type='number'] {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-.list li:hover .delete-btn {
+#expense-tracker .list li:hover .delete-btn {
   opacity: 1;
 }
-.list-container {
+#expense-tracker .list-container {
   position: relative;
 }
-.scroll-btn {
-  position: absolute;
+#expense-tracker .list-container {
+  position: relative;
+}
+#expense-tracker #scrollUp {
+  top:0%;
+}
+#expense-tracker #scrollDown {
+  bottom:0%;
+}
+#expense-tracker input[type="file"] {
+  display: none;
+}
+#expense-tracker-settings button {
+  margin: 2em auto;
+}
+#expense-tracker #undoToast {
+  width: 50vw;
+  margin: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  font-size: 18px;
+}
+#expense-tracker #undoToast button {
+  width: 100%;
+  height: auto;
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 18px;
-  margin: auto;
-  width: fit-content;
+  background: #e74c3c;
+  color: var(--primary-color);
 }
-.up {
-  top:0%;
+#expense-tracker #undoToast button:hover {
+  box-shadow: rgba(255, 0, 0, 0.35) 0 -25px 18px -14px inset,rgba(255, 0, 0,.25) 0 1px 2px,rgba(255, 0, 0,.25) 0 2px 4px,rgba(255, 0, 0,.25) 0 4px 8px,rgba(255, 0, 0,.25) 0 8px 16px,rgba(255, 0, 0,.25) 0 16px 32px;
 }
-.down {
-  bottom:0%;
-}
-
-input[type="file"] {
-  display: none;
-}
-
-#undoToast {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
-}
-
-#undoToast.show {
+#expense-tracker #undoToast.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
   animation: fadein 0.5s, fadeout 0.5s 4.5s;
 }
-
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;} 
   to {bottom: 30px; opacity: 1;}
 }
-
 @keyframes fadein {
   from {bottom: 0; opacity: 0;}
   to {bottom: 30px; opacity: 1;}
 }
-
 @-webkit-keyframes fadeout {
   from {bottom: 30px; opacity: 1;} 
   to {bottom: 0; opacity: 0;}
 }
-
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
