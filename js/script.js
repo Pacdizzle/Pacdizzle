@@ -1,3 +1,4 @@
+// Start of Theme Switcher
 var themeSwitch = document.getElementById('theme-switcher');
 var theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
   if (theme) {
@@ -7,7 +8,7 @@ var theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
   
   themeSwitch.addEventListener('change', function() {
     document.cookie = `theme=${this.checked ? 'dark' : 'light'}; path=/`;
-  });
+});
 
 document.getElementById('theme-switcher').addEventListener('change', function() {
 var rssLight = document.getElementById('rssLight');
@@ -21,7 +22,33 @@ var rssDark = document.getElementById('rssDark');
       rssLight.style.display = 'block';
   }
 });
+//End of Theme Switcher
 
+// Start of Dropdown Content
+function dropdown(dropdownId) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  for (var i = 0; i < dropdowns.length; i++) {
+      if (dropdowns[i].id !== dropdownId) {
+          dropdowns[i].classList.remove("show");
+      }
+  }
+  document.getElementById(dropdownId).classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.idropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
+  }
+}
+// End of Dropdown content
+
+// Start of *arr right-click
 const prowlarr = document.getElementById("prowlarr");
 prowlarr.addEventListener("contextmenu", (e) => {e.preventDefault(window.open("http://localhost:9696/","_self"))});
 
@@ -36,100 +63,20 @@ lidarr.addEventListener("contextmenu", (e) => {e.preventDefault(window.open("htt
 
 const readarr = document.getElementById("readarr");
 readarr.addEventListener("contextmenu", (e) => {e.preventDefault(window.open("http://localhost:8787/","_self"))});
+// End of *arr right-click
 
-var l1 = document.getElementById("1");
-var l2 = document.getElementById("2");
-var l3 = document.getElementById("3");
-var l4 = document.getElementById("4");
-var l5 = document.getElementById("5");
-var l6 = document.getElementById("6");
-
-function l01() {
-    if (l1.style.display === "none") {
-      l1.style.display = "block";
-      l2.style.display = "none";
-      l3.style.display = "none";
-      l4.style.display = "none";
-      l5.style.display = "none";
-      l6.style.display = "none";
-    } else {
-      l1.style.display = "none";
-    }
-  }
-  function l02() {
-    if (l2.style.display === "none") {
-        l1.style.display = "none";
-        l2.style.display = "block";
-        l3.style.display = "none";
-        l4.style.display = "none";
-        l5.style.display = "none";
-        l6.style.display = "none";
-    } else {
-      l2.style.display = "none";
-    }
-  } 
-  function l03() {
-    if (l3.style.display === "none") {
-        l1.style.display = "none";
-        l2.style.display = "none";
-        l3.style.display = "block";
-        l4.style.display = "none";
-        l5.style.display = "none";
-        l6.style.display = "none";
-    } else {
-      l3.style.display = "none";
-    }
-  } 
-  function l04() {
-    if (l4.style.display === "none") {
-        l1.style.display = "none";
-        l2.style.display = "none";
-        l3.style.display = "none";
-        l4.style.display = "block";
-        l5.style.display = "none";
-        l6.style.display = "none";
-    } else {
-      l4.style.display = "none";
-    }
-  } 
-  function l05() {
-    if (l5.style.display === "none") {
-        l1.style.display = "none";
-        l2.style.display = "none";
-        l3.style.display = "none";
-        l4.style.display = "none";
-        l5.style.display = "block";
-        l6.style.display = "none";
-    } else {
-      l5.style.display = "none";
-    }
-  }
-  function l06() {
-    if (l6.style.display === "none") {
-        l1.style.display = "none";
-        l2.style.display = "none";
-        l3.style.display = "none";
-        l4.style.display = "none";
-        l5.style.display = "none";
-        l6.style.display = "block";
-    } else {
-      l6.style.display = "none";
-    }
-  }
-  function percentage_1() {
-    // Method returns the element of percent id
-    var percent = document.getElementById("percent").value;
-    // Method returns the element of num id
-    var num = document.getElementById("num").value;
-    document.getElementById("value1")
-        .value = (num / 100) * percent;
-    }
-        
-    function percentage_2() {
-    // Method returns the element of num1 id
-    var num1 = document.getElementById("num1").value;
-    // Method returns the elements of num2 id
-    var num2 = document.getElementById("num2").value;
-    document.getElementById("value2")
-        .value = (num1 * 100) / num2 + "%";
-    }
+// Start of Percentage Calculator
+function percentage_1() {
+  var percent = document.getElementById("percent").value;
+  var num = document.getElementById("num").value;
+  document.getElementById("value1")
+      .value = (num / 100) * percent;
+}
+      
+function percentage_2() {
+  var num1 = document.getElementById("num1").value;
+  var num2 = document.getElementById("num2").value;
+  document.getElementById("value2")
+      .value = (num1 * 100) / num2 + "%";
+}
+// End of Percentage Calculator

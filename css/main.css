@@ -186,6 +186,9 @@ header svg {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.show {
+  display: block;
+}
 .h1-a a{
   padding: 0 !important;
 }
