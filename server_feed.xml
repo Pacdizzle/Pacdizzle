@@ -1,24 +1,18 @@
 <?xml version="1.0" ?>
-<rss version="2.0">
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>FiveM Server Feed</title>
     <description>Latest updates from our FiveM server</description>
-    <link>https://your-server.com</link>
-    <lastBuildDate>Sat, 02 Aug 2025 02:27:09 GMT</lastBuildDate>
+    <link>https://pacdizzle.com/server_feed.xml</link>
+    <lastBuildDate>Sat, 02 Aug 2025 02:43:59 GMT</lastBuildDate>
     <language>en-us</language>
+    <ns0:link href="https://pacdizzle.com/server_feed.xml/server_feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Update from #general</title>
-      <description>**Message:** !add_channel #1294881198799061034 | **Posted by:** Frank Compton</description>
-      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401028526777569470</link>
-      <pubDate>Sat, 02 Aug 2025 02:27:10 GMT</pubDate>
-      <guid>1401028526777569470</guid>
-    </item>
-    <item>
-      <title>Test from #general</title>
-      <description>**Message:** Test RSS generation | **Posted by:** Frank Compton</description>
-      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401028391062474865</link>
-      <pubDate>Sat, 02 Aug 2025 02:26:37 GMT</pubDate>
-      <guid>test-1401028391062474865</guid>
+      <description>**Message:** !force_update | **Posted by:** Frank Compton</description>
+      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401032761296289894</link>
+      <pubDate>Sat, 02 Aug 2025 02:44:00 GMT</pubDate>
+      <guid>https://discord.com/channels/1294881195452268554/1294881198799061034/1401032761296289894</guid>
     </item>
   </channel>
 </rss>
