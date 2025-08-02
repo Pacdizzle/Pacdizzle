@@ -1,39 +1,39 @@
-<?xml version="1.0" ?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FiveM Server Feed</title>
     <description>Latest updates from our FiveM server</description>
     <link>https://pacdizzle.com</link>
-    <lastBuildDate>Sat, 02 Aug 2025 03:11:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 Aug 2025 03:17:51 GMT</lastBuildDate>
     <language>en-us</language>
     <atom:link href="https://pacdizzle.com/server_feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Update from #general</title>
       <description>Message: !force_update | Posted by: Frank Compton</description>
-      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401039783316422757</link>
-      <pubDate>Sat, 02 Aug 2025 03:11:54 GMT</pubDate>
-      <guid isPermaLink="true">https://discord.com/channels/1294881195452268554/1294881198799061034/1401039783316422757</guid>
+      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401041286513033439</link>
+      <pubDate>Sat, 02 Aug 2025 03:17:52 GMT</pubDate>
+      <guid isPermaLink="true">https://discord.com/channels/1294881195452268554/1294881198799061034/1401041286513033439</guid>
     </item>
     <item>
       <title>Update from #general</title>
       <description>Message: !test_rss | Posted by: Frank Compton</description>
-      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401039764571815989</link>
-      <pubDate>Sat, 02 Aug 2025 03:11:49 GMT</pubDate>
-      <guid isPermaLink="true">https://discord.com/channels/1294881195452268554/1294881198799061034/1401039764571815989</guid>
+      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401041262441791499</link>
+      <pubDate>Sat, 02 Aug 2025 03:17:47 GMT</pubDate>
+      <guid isPermaLink="true">https://discord.com/channels/1294881195452268554/1294881198799061034/1401041262441791499</guid>
     </item>
     <item>
       <title>Test from #general</title>
       <description>Message: Test RSS generation | Posted by: Frank Compton</description>
-      <link>https://pacdizzle.com/test/63d17174-ac8b-47b6-97c5-ea1a7d1ff0da</link>
-      <pubDate>Sat, 02 Aug 2025 03:11:48 GMT</pubDate>
-      <guid isPermaLink="true">https://pacdizzle.com/test/63d17174-ac8b-47b6-97c5-ea1a7d1ff0da</guid>
+      <link>https://pacdizzle.com/test/1ac167ba-940f-46b9-a8cc-f4aa01413999</link>
+      <pubDate>Sat, 02 Aug 2025 03:17:45 GMT</pubDate>
+      <guid isPermaLink="true">https://pacdizzle.com/test/1ac167ba-940f-46b9-a8cc-f4aa01413999</guid>
     </item>
     <item>
       <title>Update from #general</title>
       <description>Message: !clear_feed | Posted by: Frank Compton</description>
-      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401039742501388380</link>
-      <pubDate>Sat, 02 Aug 2025 03:11:44 GMT</pubDate>
-      <guid isPermaLink="true">https://discord.com/channels/1294881195452268554/1294881198799061034/1401039742501388380</guid>
+      <link>https://discord.com/channels/1294881195452268554/1294881198799061034/1401041246616813630</link>
+      <pubDate>Sat, 02 Aug 2025 03:17:43 GMT</pubDate>
+      <guid isPermaLink="true">https://discord.com/channels/1294881195452268554/1294881198799061034/1401041246616813630</guid>
     </item>
   </channel>
 </rss>
